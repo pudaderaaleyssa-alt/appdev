@@ -1,12 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Card Homepage</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4, #a18cd1, #fbc2eb);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
+    }
+
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    .profile-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(15px);
+      border-radius: 25px;
+      padding: 30px;
+      width: 320px;
+      text-align: center;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+      animation: floatCard 6s ease-in-out infinite;
+      transition: transform 0.3s;
+    }
+
+    @keyframes floatCard {
+      0%, 100% { transform: translateY(0px);}
+      50% { transform: translateY(-15px);}
+    }
+
+    .profile-card img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      object-fit: cover;
+      margin-bottom: 15px;
+      transition: transform 0.5s;
+    }
+
+    .profile-card img:hover {
+      transform: scale(1.1);
+    }
+
+    .profile-card h2 {
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+
+    .profile-card p {
+      font-size: 14px;
+      margin-bottom: 10px;
+      color: #e0e0e0;
+    }
+
+    .profile-card .interests {
+      font-size: 13px;
+      margin-bottom: 15px;
+      color: #f0f0f0;
+    }
+
+    .profile-card .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .profile-card .buttons a {
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      background: #fff;
+      color: #ff6eb4;
+      font-weight: bold;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .profile-card .buttons a:hover {
+      background: #ff6eb4;
+      color: #fff;
+    }
+
+  </style>
 </head>
 <body>
-    <h1>ALEYSSA</h1>
-    
+
+  <div class="profile-card">
+    <img src="https://cdn-useast1.kapwing.com/static/templates/crying-cat-meme-template-regular-096fc808.webp" alt="Crying Cat Meme">
+    <h2>Aleyssa Pudadera</h2>
+    <p>Bachelor of Science in Information Technology</p>
+    <p>Section: 3F</p>
+    <p>Age: 20</p>
+    <div class="interests">
+      Aspiring Web Developer | Tech Enthusiast | Designer | Photographer
+    </div>
+    <div class="buttons">
+      <a href="#">Follow</a>
+      <a href="#">Message</a>
+    </div>
+  </div>
+
 </body>
 </html>
